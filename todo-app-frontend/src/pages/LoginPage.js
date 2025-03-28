@@ -16,7 +16,7 @@ const LoginPage = () => {
       console.log("Attempting login...");
 
       const response = await axios.post(
-        "http://localhost:3000/api/auth/login", 
+        `${process.env.REACT_APP_BACKEND_URL}/api/auth/login`, 
         { email, password }
       );
 
