@@ -10,7 +10,9 @@ const taskRoutes = require("./routes/taskRoutes");
 const app = express();
 
 app.use(cors({
-  origin: "http://localhost:3001", 
+  origin: ["http://localhost:3001",
+           "https://maaz-todo-app.netlify.app"
+           ],
   methods: ["GET", "POST", "PUT", "DELETE"], 
   credentials: true 
 }));
