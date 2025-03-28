@@ -14,7 +14,7 @@ const TodoListPage = () => {
   useEffect(() => {
     const fetchTasks = async () => {
       try {
-        const response = await axios.get("http://localhost:3000/api/tasks", {
+        const response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/tasks`, {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
           },
