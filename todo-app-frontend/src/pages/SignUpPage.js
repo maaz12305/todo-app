@@ -17,7 +17,7 @@ const SignUpPage = () => {
       console.log("Submitting registration...");
 
       const response = await axios.post(
-        "http://localhost:3000/api/auth/register", 
+        `${process.env.REACT_APP_BACKEND_URL}/api/auth/register`, 
         { username, email, password }
       );
 
