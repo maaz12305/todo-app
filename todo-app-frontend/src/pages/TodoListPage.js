@@ -38,7 +38,7 @@ const TodoListPage = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:3000/api/tasks",
+        "`${process.env.REACT_APP_BACKEND_URL}/api/tasks`,
         { title: newTask, description: "" },
         {
           headers: {
@@ -55,7 +55,7 @@ const TodoListPage = () => {
 
   const handleDeleteTask = async (id) => {
     try {
-      await axios.delete(`http://localhost:3000/api/tasks/${id}`, {
+      await axios.delete(`${process.env.REACT_APP_BACKEND_URL}/api/tasks/${id}`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
@@ -77,7 +77,7 @@ const TodoListPage = () => {
 
     try {
       const response = await axios.put(
-        `http://localhost:3000/api/tasks/${id}`,
+        `${process.env.REACT_APP_BACKEND_URL}/api/tasks/${id}`,
         { title: editingTitle },
         {
           headers: {
