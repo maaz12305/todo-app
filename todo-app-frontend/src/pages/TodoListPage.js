@@ -38,7 +38,7 @@ const TodoListPage = () => {
 
     try {
       const response = await axios.post(
-        "`${process.env.REACT_APP_BACKEND_URL}/api/tasks`,
+        `${process.env.REACT_APP_BACKEND_URL}/api/tasks`,
         { title: newTask, description: "" },
         {
           headers: {
