@@ -1,9 +1,0 @@
-[build]
-  base = "todo-app-frontend"         
-  command = "npm run build"           
-  publish = "todo-app-frontend/build" 
-
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
